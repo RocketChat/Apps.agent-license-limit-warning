@@ -1,0 +1,44 @@
+{
+    "id": "3b96538a-f823-4879-b6df-fde7a4377dcf",
+    "version": "1.2.0",
+    "requiredApiVersion": "^1.44.0",
+    "iconFile": "warning icon.png",
+    "author": {
+        "name": "Morgan Lemke",
+        "homepage": "rocket.chat",
+        "support": "rocket.chat"
+    },
+    "name": "agent license limit warning",
+    "nameSlug": "agent-license-limit-warning",
+    "classFile": "AgentLicenseLimitWarningApp.ts",
+    "description": "The Agent License Limit Warning app monitors your Rocket.Chat workspace's license usage in real-time. When a new user is created, it checks the number of active users against your license limit and sends proactive alerts if a predefined threshold is exceeded. Notifications can be directed to specific users via direct message, selected rooms, or external endpoints—ensuring your team stays informed and avoids unexpected service disruptions. Ideal for admins and workspace owners who need to stay compliant and prevent license overages.",
+    "implements": [
+        "IPostUserCreated"
+    ],
+    "permissions": [
+        {
+            "name": "server-setting.read"
+        },
+        {
+            "name": "server-setting.write"
+        },
+        {
+            "name": "networking"
+        },
+        {
+            "name": "env.read"
+        },
+        {
+            "name": "room.read"
+        },
+        {
+            "name": "room.write"
+        },
+        {
+            "name": "user.read"
+        },
+        {
+            "name": "message.write"
+        }
+    ]
+}
